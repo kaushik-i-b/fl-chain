@@ -5,18 +5,20 @@ import (
 
 	"cosmossdk.io/core/store"
 	"cosmossdk.io/log"
+
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-
+	"github.com/cosmos/cosmos-sdk/x/bank/keeper"
 	"github.com/kaushik-i-b/fl-chain/x/flchain/types"
 )
 
 type (
 	Keeper struct {
-		cdc          codec.BinaryCodec
-		storeService store.KVStoreService
-		logger       log.Logger
-
+		cdc           codec.BinaryCodec
+		storeService  store.KVStoreService
+		logger        log.Logger
+		bankKeeper    keeper.Keeper
+		moduleAddress sdk.AccAddress
 		// the address capable of executing a MsgUpdateParams message. Typically, this
 		// should be the x/gov module account.
 		authority string

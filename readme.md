@@ -9,7 +9,24 @@ ignite chain serve
 
 `serve` command installs dependencies, builds, initializes, and starts your blockchain in development.
 
-### Configure
+### Configure# FL-Chain
+
+A Cosmos SDK-based blockchain implementing flash loan functionality.
+
+## Overview
+FL-Chain is a blockchain module that enables flash loan capabilities, allowing users to borrow assets temporarily within a single transaction.
+
+## Prerequisites
+- Go 1.18+
+- Cosmos SDK v0.50.9
+- Make
+
+## Installation
+
+```bash
+git clone https://github.com/kaushik-i-b/fl-chain
+cd fl-chain
+make install
 
 Your blockchain in development can be configured with `config.yml`. To learn more, see the [Ignite CLI docs](https://docs.ignite.com).
 
